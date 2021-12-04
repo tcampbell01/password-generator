@@ -1,10 +1,23 @@
+
 // Assignment code here
+var chosenPassword="";
+function generatePassword () {  // Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
+generateBtn.addEventListener("click", writePassword);
+}
 
-function generatePassword () {
 
+
+
+
+//Add event listener to generate button
+
+
+
+  
 
 // lowercase, uppercase, numbers, and special character arrays
-  var lowercase =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+var lowercase =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
 var uppercase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 
@@ -30,15 +43,22 @@ var promptSpecialCharacters=window.prompt('Would you like Special Characters in 
 
 
 // lowercase only 
-if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers === "NO" && promptSpecialCharacters==="NO") {
+if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers === "NO" && promptSpecialCharacters==="NO")
+
+{
 
 for (var i=0;i<NumberOfCharacters;i++){
   var randLowercase = lowercase[Math.floor(Math.random() * lowercase.length)];
 
-console.log(randLowercase);
+  chosenPassword=randLowercase+chosenPassword
+
+console.log(chosenPassword); 
+
+
 
 }
-}
+
+
 //lower case and uppercase only
 var LowerUpper = lowercase.concat(uppercase);
 
@@ -47,7 +67,7 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers === "N
 {
 
   for (var i=0; i<NumberOfCharacters;i++){
-    var randLowerUpper = LowerUpper[Math.floor(Math.random() *LowerUpper.length)];
+   var randLowerUpper = LowerUpper[Math.floor(Math.random() *LowerUpper.length)];
 
     console.log(randLowerUpper); }
    
@@ -91,7 +111,7 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
 
       console.log(randLowerNum);}
   
-    }
+  }
 
 
     
@@ -120,8 +140,10 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
       var randLowerSpecial= LowerSpecial[Math.floor(Math.random()*LowerSpecial.length)];
 
       console.log (randLowerSpecial);}
-
+  
     }
+
+    
 
   //uppercase
 
@@ -133,7 +155,8 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
 
       console.log (randUppercase);}
 
-  }
+    }
+  
   //uppercase, numbers
 
   var UpperNumbers= uppercase.concat(numbers);
@@ -141,11 +164,14 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
   if (promptLowercase ==="NO" && promptUppercase ==="YES" && promptNumbers =="YES" && promptSpecialCharacters ==="NO")
   {
     for (var i=0; i<NumberOfCharacters; i++) {
-      var randUpperNumbers= UpperNumbers[Math.floor(Math.random()UpperNumbers.length)];
+      var randUpperNumbers= UpperNumbers[Math.floor(Math.random()*UpperNumbers.length)];
+
+
 
       console.log (randUpperNumbers);}
 
-    }
+  }
+}
 
   //uppercase, numbers, special
 
@@ -156,23 +182,17 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
   //special 
 
 
-  }
-
-
-
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
+  //Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  //var password = generatePassword();
+  generatePassword();
+  //chosenPassword  = document.querySelector("#password").innerHtml;
+ 
+  document.querySelector("#password").innerHtml= chosenPassword;
+ 
+  //passwordText.value = password;
+ }
 
-  passwordText.value = password;
+  
 
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
 

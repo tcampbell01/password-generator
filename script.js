@@ -50,122 +50,174 @@ return chosenPassword;
 
 
 //lower case and uppercase only
-//var LowerUpper = lowercase.concat(uppercase);
+var LowerUpper = lowercase.concat(uppercase);
 
-//if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers === "NO" && promptSpecialCharacters==="NO")
+if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers === "NO" && promptSpecialCharacters==="NO")
 
-//{
+{
 
-  //for (var i=0; i<NumberOfCharacters;i++){
-   //var randLowerUpper = LowerUpper[Math.floor(Math.random() *LowerUpper.length)];
+  for (var i=0; i<NumberOfCharacters;i++){
+   var randLowerUpper = LowerUpper[Math.floor(Math.random() *LowerUpper.length)];
 
-    //console.log(randLowerUpper); }
+   chosenPassword=randLowerUpper+chosenPassword
+  }
 
-   
-   
+    console.log(chosenPassword); 
 
-//}
+    return chosenPassword
+
+}
+
 
 //lower case, uppercase and numbers 
-//var LowerUpperNum = LowerUpper.concat(numbers);
+var LowerUpperNum = LowerUpper.concat(numbers);
 
-//if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YES" && promptSpecialCharacters==="NO")
+if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YES" && promptSpecialCharacters==="NO")
 
-//{
-  //for (var i=0; i<NumberOfCharacters; i++){
-    //var randLowerUpperNum = LowerUpperNum[Math.floor(Math.random()*LowerUpperNum.length)];
+{
+  for (var i=0; i<NumberOfCharacters; i++){
+    var randLowerUpperNum = LowerUpperNum[Math.floor(Math.random()*LowerUpperNum.length)];
 
-    //console.log(randLowerUpperNum);}
+    chosenPassword=randLowerUpperNum+chosenPassword
+  }
+
+    console.log(chosenPassword);
+
+    return chosenPassword;
   
-//}
+}
 
 //lowercase, uppercase, numbers, and special characters 
-//var LowerUpperNumSpecial = LowerUpperNum.concat(specialCharacters);
+  var LowerUpperNumSpecial = LowerUpperNum.concat(specialCharacters);
 
-//if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YES" && promptSpecialCharacters==="YES")
+if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YES" && promptSpecialCharacters==="YES")
 
-//{
-  //for (var i=0; i<NumberOfCharacters; i++) {
-    //var randLowerUpperNumSpecial = LowerUpperNumSpecial[Math.floor(Math.random()*LowerUpperNumSpecial.length)];
+{
+  for (var i=0; i<NumberOfCharacters; i++) {
+    var randLowerUpperNumSpecial = LowerUpperNumSpecial[Math.floor(Math.random()*LowerUpperNumSpecial.length)];
 
-    //console.log(randLowerUpperNumSpecial);}
+    chosenPassword=randLowerUpperNumSpecial+chosenPassword
+  }
 
-  //}
+    console.log(chosenPassword);
+
+    return chosenPassword;
+
+  }
   //lowercase, numbers
 
-  //var LowerNum = lowercase.concat(numbers);
+  var LowerNum = lowercase.concat(numbers);
 
-  //if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="YES" && promptSpecialCharacters ==="NO")
+  if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="YES" && promptSpecialCharacters ==="NO")
 
-  //{
-    //for (var i=0; i<NumberOfCharacters; i++) {
-      //var randLowerNum= LowerNum[Math.floor(Math.random()*LowerNum.length)];
+  {
+    for (var i=0; i<NumberOfCharacters; i++) {
+      var randLowerNum= LowerNum[Math.floor(Math.random()*LowerNum.length)];
 
-      //console.log(randLowerNum);}
+      chosenPassword=randLowerNum+chosenPassword;
+    }
+
+      console.log(chosenPassword);
+
+      return chosenPassword;
   
-  //}
+  }
 
 
     
   //lowercase, numbers, special
 
-  //var LowerNumSpecial =LowerNum.concat(specialCharacters);
+  var LowerNumSpecial =LowerNum.concat(specialCharacters);
 
-  //if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="YES" && promptSpecialCharacters ==="YES")
+  if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="YES" && promptSpecialCharacters ==="YES")
 
-  //{
-    //for (var i=0; i<NumberOfCharacters; i++) {
-      //var randLowerNumSpecial =LowerNumSpecial[Math.floor(Math.random()*LowerNumSpecial.length)];
+  {
+    for (var i=0; i<NumberOfCharacters; i++) {
+      var randLowerNumSpecial =LowerNumSpecial[Math.floor(Math.random()*LowerNumSpecial.length)];
 
-      //console.log (randLowerNumSpecial);}
-    //}
+      chosenPassword=randLowerNumSpecial+chosenPassword;
+    }
+  console.log(chosenPassword);
+
+  return chosenPassword;
+  
+}
 
 
   //lowercase, special
 
-  //var LowerSpecial = lowercase.concat(specialCharacters);
+  var LowerSpecial = lowercase.concat(specialCharacters);
 
-  //if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="NO" && promptSpecialCharacters ==="YES")
+  if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="NO" && promptSpecialCharacters ==="YES")
 
-  //{
-    //for (var i=0; i<NumberOfCharacters; i++) {
-      //var randLowerSpecial= LowerSpecial[Math.floor(Math.random()*LowerSpecial.length)];
+  {
+    for (var i=0; i<NumberOfCharacters; i++) {
+      var randLowerSpecial= LowerSpecial[Math.floor(Math.random()*LowerSpecial.length)];
 
-      //console.log (randLowerSpecial);}
-  
-    //}
+    chosenPassword=randLowerSpecial+chosenPassword;
+    }
+
+    console.log(chosenPassword);
+
+    return chosenPassword;
+
+  }
 
     
 
   //uppercase
 
-  //if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="NO" && promptSpecialCharacters ==="NO")
+  if (promptLowercase ==="NO" && promptUppercase ==="YES" && promptNumbers =="NO" && promptSpecialCharacters ==="NO")
 
-  //{
-    //for (var i=0; i<NumberOfCharacters; i++) {
-      //var randUppercase =uppercase[Math.floor(Math.random()*lowercase.length)];
+  {
+    for (var i=0; i<NumberOfCharacters; i++) {
+      var randUppercase =uppercase[Math.floor(Math.random()*lowercase.length)];
 
-      //console.log (randUppercase);}
+      chosenPassword=randUppercase+chosenPassword;
+    }
 
-    //}
+    console.log(chosenPassword);
+
+    return chosenPassword;
+
+  }
+
   
   //uppercase, numbers
 
-  //var UpperNumbers= uppercase.concat(numbers);
+  var UpperNumbers= uppercase.concat(numbers);
 
-  //if (promptLowercase ==="NO" && promptUppercase ==="YES" && promptNumbers =="YES" && promptSpecialCharacters ==="NO")
-  //{
-    //for (var i=0; i<NumberOfCharacters; i++) {
-      //var randUpperNumbers= UpperNumbers[Math.floor(Math.random()*UpperNumbers.length)];
+  if (promptLowercase ==="NO" && promptUppercase ==="YES" && promptNumbers =="YES" && promptSpecialCharacters ==="NO")
+  {
+    for (var i=0; i<NumberOfCharacters; i++) {
+      var randUpperNumbers= UpperNumbers[Math.floor(Math.random()*UpperNumbers.length)];
 
+      chosenPassword=randUpperNumbers+chosenPassword;
+    }
 
+    console.log(chosenPassword);
 
-      //console.log (randUpperNumbers);}
+    return chosenPassword;
+  }
 
-  //}
-//}
 
   //uppercase, numbers, special
+
+  var UpperNumSpecial=UpperNumbers.concat(specialCharacters);
+
+  if (promptLowercase==="NO" && promptUppercase ==="YES" && promptNumbers ==="YES" && promptSpecialCharacters ==="YES")
+
+  {
+    for (var i=0; i<NumberOfCharacters; i++) {
+      var randUpperNumSpecial= UpperNumSpecial[Math.floor(Math.random()*UpperNumbers.length)];
+
+      chosenPassword=randUpperNumSpecial+chosenPassword;
+    }
+
+    console.log(chosenPassword);
+
+    return chosenPassword;
+  }
 
   //uppercase, special
 

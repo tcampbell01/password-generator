@@ -163,7 +163,23 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
 
   }
 
-    
+  //lowercase, uppercase, special
+  
+  var LowerUpperSpecial = LowerUpper.concat(specialCharacters);
+
+  if (promptLowercase==="YES" && promptUppercase ==="YES" && promptNumbers =="NO" && promptSpecialCharacters ==="YES")
+{
+  for (var i=0;i<NumberOfCharacters; i++) {
+  var randLowerUpperSpecial = LowerUpperSpecial[Math.floor(Math.random()*LowerUpperSpecial.length)];
+
+  chosenPassword=randLowerUpperSpecial+chosenPassword;
+  }
+
+  console.log(chosenPassword);
+
+  return chosenPassword;
+
+}
 
   //uppercase
 

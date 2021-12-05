@@ -33,6 +33,12 @@ var promptSpecialCharacters=window.prompt('Would you like Special Characters in 
 // lowercase only 
 if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers === "NO" && promptSpecialCharacters==="NO")
 
+
+var confirmPassword = window.confirm('You would like lowercase only?');
+
+
+if (confirmPassword)
+
 {
 
 for (var i=0;i<NumberOfCharacters;i++){
@@ -54,6 +60,10 @@ var LowerUpper = lowercase.concat(uppercase);
 
 if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers === "NO" && promptSpecialCharacters==="NO")
 
+var confirmPassword = window.confirm('You would like lowercase and uppercase?');
+
+
+if (confirmPassword)
 {
 
   for (var i=0; i<NumberOfCharacters;i++){
@@ -74,6 +84,10 @@ var LowerUpperNum = LowerUpper.concat(numbers);
 
 if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YES" && promptSpecialCharacters==="NO")
 
+var confirmPassword = window.confirm('You would like lowercase, uppercase, and numbers?');
+
+
+if (confirmPassword)
 {
   for (var i=0; i<NumberOfCharacters; i++){
     var randLowerUpperNum = LowerUpperNum[Math.floor(Math.random()*LowerUpperNum.length)];
@@ -92,6 +106,10 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
 
 if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YES" && promptSpecialCharacters==="YES")
 
+var confirmPassword = window.confirm('You would like lowercase, uppercase, numbers, and special characters?');
+
+
+if (confirmPassword)
 {
   for (var i=0; i<NumberOfCharacters; i++) {
     var randLowerUpperNumSpecial = LowerUpperNumSpecial[Math.floor(Math.random()*LowerUpperNumSpecial.length)];
@@ -110,6 +128,10 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
 
   if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="YES" && promptSpecialCharacters ==="NO")
 
+  var confirmPassword = window.confirm('You would like lowercase and numbers?');
+
+
+if (confirmPassword)
   {
     for (var i=0; i<NumberOfCharacters; i++) {
       var randLowerNum= LowerNum[Math.floor(Math.random()*LowerNum.length)];
@@ -131,6 +153,10 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
 
   if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="YES" && promptSpecialCharacters ==="YES")
 
+  var confirmPassword = window.confirm('You would like lowercase, numbers, and special characters?');
+
+
+if (confirmPassword)
   {
     for (var i=0; i<NumberOfCharacters; i++) {
       var randLowerNumSpecial =LowerNumSpecial[Math.floor(Math.random()*LowerNumSpecial.length)];
@@ -149,7 +175,11 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
   var LowerSpecial = lowercase.concat(specialCharacters);
 
   if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="NO" && promptSpecialCharacters ==="YES")
+  
+  var confirmPassword = window.confirm('You would like lowercase and special characters?');
 
+
+  if (confirmPassword)
   {
     for (var i=0; i<NumberOfCharacters; i++) {
       var randLowerSpecial= LowerSpecial[Math.floor(Math.random()*LowerSpecial.length)];
@@ -168,6 +198,11 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
   var LowerUpperSpecial = LowerUpper.concat(specialCharacters);
 
   if (promptLowercase==="YES" && promptUppercase ==="YES" && promptNumbers =="NO" && promptSpecialCharacters ==="YES")
+
+  var confirmPassword = window.confirm('You would like lowercase, uppercase, and special characters?');
+
+
+if (confirmPassword)
 {
   for (var i=0;i<NumberOfCharacters; i++) {
   var randLowerUpperSpecial = LowerUpperSpecial[Math.floor(Math.random()*LowerUpperSpecial.length)];
@@ -185,6 +220,10 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
 
   if (promptLowercase ==="NO" && promptUppercase ==="YES" && promptNumbers =="NO" && promptSpecialCharacters ==="NO")
 
+  var confirmPassword = window.confirm('You would like uppercase only?');
+
+
+if (confirmPassword)
   {
     for (var i=0; i<NumberOfCharacters; i++) {
       var randUppercase =uppercase[Math.floor(Math.random()*uppercase.length)];
@@ -204,6 +243,12 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
   var UpperNumbers= uppercase.concat(numbers);
 
   if (promptLowercase ==="NO" && promptUppercase ==="YES" && promptNumbers =="YES" && promptSpecialCharacters ==="NO")
+ 
+  var confirmPassword = window.confirm('You would like uppercase and numbers?');
+
+
+  if (confirmPassword)
+
   {
     for (var i=0; i<NumberOfCharacters; i++) {
       var randUpperNumbers= UpperNumbers[Math.floor(Math.random()*UpperNumbers.length)];
@@ -223,6 +268,10 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
 
   if (promptLowercase==="NO" && promptUppercase ==="YES" && promptNumbers ==="YES" && promptSpecialCharacters ==="YES")
 
+  var confirmPassword = window.confirm('You would like uppercase, numbers, and special characters?');
+
+
+if (confirmPassword)
   {
     for (var i=0; i<NumberOfCharacters; i++) {
       var randUpperNumSpecial= UpperNumSpecial[Math.floor(Math.random()*UpperNumSpecial.length)];
@@ -241,6 +290,10 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
 
   if (promptLowercase==="NO" && promptUppercase ==="YES" && promptNumbers ==="NO" && promptSpecialCharacters ==="YES")
 
+  var confirmPassword = window.confirm('You would like uppercase and special characters?');
+
+
+if (confirmPassword)
   {
   for (var i=0; i<NumberOfCharacters; i++) {
     var randUpperSpecial= UpperSpecial[Math.floor(Math.random()*UpperSpecial.length)];
@@ -261,6 +314,10 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
 
   if (promptLowercase==="NO" && promptUppercase==="NO" && promptNumbers ==="YES" && promptSpecialCharacters==="YES")
 
+  var confirmPassword = window.confirm('You would like numbers and special characters?');
+
+
+if (confirmPassword)
   {
   
   for (var i=0; i<NumberOfCharacters; i++) {
@@ -275,7 +332,12 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
   //special 
 
   if (promptLowercase==="NO" && promptUppercase ==="NO" && promptNumbers ==="NO" && promptSpecialCharacters==="YES")
-{
+
+  var confirmPassword = window.confirm('You would like special characters only?');
+
+
+  if (confirmPassword)
+  {
   for (var i=0; i<NumberOfCharacters; i++) {
     var randSpecial=specialCharacters[Math.floor(Math.random()*specialCharacters.length)];
 

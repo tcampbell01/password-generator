@@ -171,7 +171,7 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
 
   {
     for (var i=0; i<NumberOfCharacters; i++) {
-      var randUppercase =uppercase[Math.floor(Math.random()*lowercase.length)];
+      var randUppercase =uppercase[Math.floor(Math.random()*uppercase.length)];
 
       chosenPassword=randUppercase+chosenPassword;
     }
@@ -209,7 +209,7 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
 
   {
     for (var i=0; i<NumberOfCharacters; i++) {
-      var randUpperNumSpecial= UpperNumSpecial[Math.floor(Math.random()*UpperNumbers.length)];
+      var randUpperNumSpecial= UpperNumSpecial[Math.floor(Math.random()*UpperNumSpecial.length)];
 
       chosenPassword=randUpperNumSpecial+chosenPassword;
     }
@@ -221,9 +221,53 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
 
   //uppercase, special
 
+  var UpperSpecial=uppercase.concat(specialCharacters);
+
+  if (promptLowercase==="NO" && promptUppercase ==="YES" && promptNumbers ==="NO" && promptSpecialCharacters ==="YES")
+
+  {
+  for (var i=0; i<NumberOfCharacters; i++) {
+    var randUpperSpecial= UpperSpecial[Math.floor(Math.random()*UpperSpecial.length)];
+
+    chosenPassword=randUpperSpecial+chosenPassword;
+
+  }
+  
+
+  console.log(chosenPassword);
+
+  return chosenPassword;
+}
+
   //numbers, special
 
+  var NumSpecial=numbers.concat(specialCharacters);
+
+  if (promptLowercase==="NO" && promptUppercase==="NO" && promptNumbers ==="YES" && promptSpecialCharacters==="YES")
+
+  {
+  
+  for (var i=0; i<NumberOfCharacters; i++) {
+    var randNumSpecial=NumSpecial[Math.floor(Math.random()*NumSpecial.length)];
+
+    chosenPassword=randNumSpecial+chosenPassword;
+  }
+  console.log(chosenPassword);
+  return chosenPassword;
+  }
+
   //special 
+
+  if (promptLowercase==="NO" && promptUppercase ==="NO" && promptNumbers ==="NO" && promptSpecialCharacters==="YES")
+{
+  for (var i=0; i<NumberOfCharacters; i++) {
+    var randSpecial=specialCharacters[Math.floor(Math.random()*specialCharacters.length)];
+
+    chosenPassword=randSpecial+chosenPassword;
+  }
+  console.log(chosenPassword);
+  return chosenPassword;
+  }
 }
 
 

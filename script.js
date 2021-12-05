@@ -1,29 +1,17 @@
 
 // Assignment code here
 var chosenPassword="";
-function generatePassword () {  // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-generateBtn.addEventListener("click", writePassword);
-}
+
+function GeneratePassword () {
+  var lowercase =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
+  var uppercase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+
+  var numbers = [1,2,3,4,5,6,7,8,9,0];
+
+  var specialCharacters = ['!','@','#','$','%','^','&','*'];
 
 
-
-
-
-//Add event listener to generate button
-
-
-
-  
-
-// lowercase, uppercase, numbers, and special character arrays
-var lowercase =['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-
-var uppercase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-
-var numbers = [1,2,3,4,5,6,7,8,9,0];
-
-var specialCharacters = ['!','@','#','$','%','^','&','*'];
 
 
 //prompt for how many characters. Second var turns it into a number from a string
@@ -51,127 +39,131 @@ for (var i=0;i<NumberOfCharacters;i++){
   var randLowercase = lowercase[Math.floor(Math.random() * lowercase.length)];
 
   chosenPassword=randLowercase+chosenPassword
+}
 
-console.log(chosenPassword); 
+console.log(chosenPassword);
 
-
+return chosenPassword;
 
 }
+
 
 
 //lower case and uppercase only
-var LowerUpper = lowercase.concat(uppercase);
+//var LowerUpper = lowercase.concat(uppercase);
 
-if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers === "NO" && promptSpecialCharacters==="NO")
+//if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers === "NO" && promptSpecialCharacters==="NO")
 
-{
+//{
 
-  for (var i=0; i<NumberOfCharacters;i++){
-   var randLowerUpper = LowerUpper[Math.floor(Math.random() *LowerUpper.length)];
+  //for (var i=0; i<NumberOfCharacters;i++){
+   //var randLowerUpper = LowerUpper[Math.floor(Math.random() *LowerUpper.length)];
 
-    console.log(randLowerUpper); }
+    //console.log(randLowerUpper); }
+
+   
    
 
-}
+//}
 
 //lower case, uppercase and numbers 
-var LowerUpperNum = LowerUpper.concat(numbers);
+//var LowerUpperNum = LowerUpper.concat(numbers);
 
-if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YES" && promptSpecialCharacters==="NO")
+//if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YES" && promptSpecialCharacters==="NO")
 
-{
-  for (var i=0; i<NumberOfCharacters; i++){
-    var randLowerUpperNum = LowerUpperNum[Math.floor(Math.random()*LowerUpperNum.length)];
+//{
+  //for (var i=0; i<NumberOfCharacters; i++){
+    //var randLowerUpperNum = LowerUpperNum[Math.floor(Math.random()*LowerUpperNum.length)];
 
-    console.log(randLowerUpperNum);}
+    //console.log(randLowerUpperNum);}
   
-}
+//}
 
 //lowercase, uppercase, numbers, and special characters 
-var LowerUpperNumSpecial = LowerUpperNum.concat(specialCharacters);
+//var LowerUpperNumSpecial = LowerUpperNum.concat(specialCharacters);
 
-if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YES" && promptSpecialCharacters==="YES")
+//if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YES" && promptSpecialCharacters==="YES")
 
-{
-  for (var i=0; i<NumberOfCharacters; i++) {
-    var randLowerUpperNumSpecial = LowerUpperNumSpecial[Math.floor(Math.random()*LowerUpperNumSpecial.length)];
+//{
+  //for (var i=0; i<NumberOfCharacters; i++) {
+    //var randLowerUpperNumSpecial = LowerUpperNumSpecial[Math.floor(Math.random()*LowerUpperNumSpecial.length)];
 
-    console.log(randLowerUpperNumSpecial);}
+    //console.log(randLowerUpperNumSpecial);}
 
-  }
+  //}
   //lowercase, numbers
 
-  var LowerNum = lowercase.concat(numbers);
+  //var LowerNum = lowercase.concat(numbers);
 
-  if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="YES" && promptSpecialCharacters ==="NO")
+  //if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="YES" && promptSpecialCharacters ==="NO")
 
-  {
-    for (var i=0; i<NumberOfCharacters; i++) {
-      var randLowerNum= LowerNum[Math.floor(Math.random()*LowerNum.length)];
+  //{
+    //for (var i=0; i<NumberOfCharacters; i++) {
+      //var randLowerNum= LowerNum[Math.floor(Math.random()*LowerNum.length)];
 
-      console.log(randLowerNum);}
+      //console.log(randLowerNum);}
   
-  }
+  //}
 
 
     
   //lowercase, numbers, special
 
-  var LowerNumSpecial =LowerNum.concat(specialCharacters);
+  //var LowerNumSpecial =LowerNum.concat(specialCharacters);
 
-  if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="YES" && promptSpecialCharacters ==="YES")
+  //if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="YES" && promptSpecialCharacters ==="YES")
 
-  {
-    for (var i=0; i<NumberOfCharacters; i++) {
-      var randLowerNumSpecial =LowerNumSpecial[Math.floor(Math.random()*LowerNumSpecial.length)];
+  //{
+    //for (var i=0; i<NumberOfCharacters; i++) {
+      //var randLowerNumSpecial =LowerNumSpecial[Math.floor(Math.random()*LowerNumSpecial.length)];
 
-      console.log (randLowerNumSpecial);}
-    }
+      //console.log (randLowerNumSpecial);}
+    //}
 
 
   //lowercase, special
 
-  var LowerSpecial = lowercase.concat(specialCharacters);
+  //var LowerSpecial = lowercase.concat(specialCharacters);
 
-  if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="NO" && promptSpecialCharacters ==="YES")
+  //if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="NO" && promptSpecialCharacters ==="YES")
 
-  {
-    for (var i=0; i<NumberOfCharacters; i++) {
-      var randLowerSpecial= LowerSpecial[Math.floor(Math.random()*LowerSpecial.length)];
+  //{
+    //for (var i=0; i<NumberOfCharacters; i++) {
+      //var randLowerSpecial= LowerSpecial[Math.floor(Math.random()*LowerSpecial.length)];
 
-      console.log (randLowerSpecial);}
+      //console.log (randLowerSpecial);}
   
-    }
+    //}
 
     
 
   //uppercase
 
-  if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="NO" && promptSpecialCharacters ==="NO")
+  //if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers =="NO" && promptSpecialCharacters ==="NO")
 
-  {
-    for (var i=0; i<NumberOfCharacters; i++) {
-      var randUppercase =uppercase[Math.floor(Math.random()*lowercase.length)];
+  //{
+    //for (var i=0; i<NumberOfCharacters; i++) {
+      //var randUppercase =uppercase[Math.floor(Math.random()*lowercase.length)];
 
-      console.log (randUppercase);}
+      //console.log (randUppercase);}
 
-    }
+    //}
   
   //uppercase, numbers
 
-  var UpperNumbers= uppercase.concat(numbers);
+  //var UpperNumbers= uppercase.concat(numbers);
 
-  if (promptLowercase ==="NO" && promptUppercase ==="YES" && promptNumbers =="YES" && promptSpecialCharacters ==="NO")
-  {
-    for (var i=0; i<NumberOfCharacters; i++) {
-      var randUpperNumbers= UpperNumbers[Math.floor(Math.random()*UpperNumbers.length)];
+  //if (promptLowercase ==="NO" && promptUppercase ==="YES" && promptNumbers =="YES" && promptSpecialCharacters ==="NO")
+  //{
+    //for (var i=0; i<NumberOfCharacters; i++) {
+      //var randUpperNumbers= UpperNumbers[Math.floor(Math.random()*UpperNumbers.length)];
 
 
 
-      console.log (randUpperNumbers);}
+      //console.log (randUpperNumbers);}
 
-  }
-}
+  //}
+//}
 
   //uppercase, numbers, special
 
@@ -180,19 +172,30 @@ if (promptLowercase ==="YES" && promptUppercase ==="YES" && promptNumbers ==="YE
   //numbers, special
 
   //special 
+}
 
 
-  //Write password to the #password input
+
+
+ // Assignment Code Ending
+var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input
 function writePassword() {
-  //var password = generatePassword();
-  generatePassword();
-  //chosenPassword  = document.querySelector("#password").innerHtml;
- 
-  document.querySelector("#password").innerHtml= chosenPassword;
- 
-  //passwordText.value = password;
- }
+  var password = GeneratePassword();
+  var passwordText = document.querySelector("#password");
 
-  
+  passwordText.value = password;
+
+}
+
+
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+
+
+
 
 

@@ -17,3 +17,6 @@ THEN the password is either displayed in an alert or written to the page
 
 https://tcampbell01.github.io/turbo-funicular/
 
+
+
+![screenshot password generator](https://user-images.githubusercontent.com/93332105/144766109-aa1d6b53-a36f-4e06-b423-1fab02bf0d6f.jpg)

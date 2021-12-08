@@ -15,22 +15,24 @@ function GeneratePassword () {
 
 
 //prompt for how many characters. Second var turns it into a number from a string
-var promptNumberOfCharacters=window.prompt ('How many characters would you like in your password? Please type a number between 8 and 128');
+var promptPasswordLength=window.prompt ('How many characters would you like in your password? Please type a number between 8 and 128');
+var passwordLength=parseInt(promptPasswordLength,10);
 
-var NumberOfCharacters=parseInt(promptNumberOfCharacters,10);
+ if (passwordLength<=8 || passwordLength>=128) {
+   var promptPasswordLength=window.prompt ('Please choose a number between 8 and 128')
+   var passwordLength=parseInt(promptPasswordLength,10);
+ }
+else if (passwordLength>8 && passwordLength<128) 
 
-
-//question prompts
 var promptLowercase =window.prompt('Would you like Lowercase letters in your password? Enter "YES" or "NO" to choose.');
 
-var promptUppercase =window.prompt('Would you like Uppercase letters in your password? Enter "YES" or "NO" to choose.');
+    var promptUppercase =window.prompt('Would you like Uppercase letters in your password? Enter "YES" or "NO" to choose.');
+    
+    var promptNumbers =window.prompt('Would you like Numbers in your password? Enter "YES" or "NO" to choose.');
+    
+    var promptSpecialCharacters=window.prompt('Would you like Special Characters in your password? Enter "YES" or "NO" to choose');
 
-var promptNumbers =window.prompt('Would you like Numbers in your password? Enter "YES" or "NO" to choose.');
-
-var promptSpecialCharacters=window.prompt('Would you like Special Characters in your password? Enter "YES" or "NO" to choose');
-
-
-// lowercase only 
+    // lowercase only 
 if (promptLowercase ==="YES" && promptUppercase ==="NO" && promptNumbers === "NO" && promptSpecialCharacters==="NO")
 
 
@@ -41,7 +43,7 @@ if (confirmPassword)
 
 {
 
-for (var i=0;i<NumberOfCharacters;i++){
+for (var i=0;i<passwordLength;i++){
   var randLowercase = lowercase[Math.floor(Math.random() * lowercase.length)];
 
   chosenPassword=randLowercase+chosenPassword
@@ -66,7 +68,7 @@ var confirmPassword = window.confirm('You would like lowercase and uppercase?');
 if (confirmPassword)
 {
 
-  for (var i=0; i<NumberOfCharacters;i++){
+  for (var i=0; i<passwordLength;i++){
    var randLowerUpper = LowerUpper[Math.floor(Math.random() *LowerUpper.length)];
 
    chosenPassword=randLowerUpper+chosenPassword
@@ -89,7 +91,7 @@ var confirmPassword = window.confirm('You would like lowercase, uppercase, and n
 
 if (confirmPassword)
 {
-  for (var i=0; i<NumberOfCharacters; i++){
+  for (var i=0; i<passwordLength; i++){
     var randLowerUpperNum = LowerUpperNum[Math.floor(Math.random()*LowerUpperNum.length)];
 
     chosenPassword=randLowerUpperNum+chosenPassword
@@ -111,7 +113,7 @@ var confirmPassword = window.confirm('You would like lowercase, uppercase, numbe
 
 if (confirmPassword)
 {
-  for (var i=0; i<NumberOfCharacters; i++) {
+  for (var i=0; i<passwordLength; i++) {
     var randLowerUpperNumSpecial = LowerUpperNumSpecial[Math.floor(Math.random()*LowerUpperNumSpecial.length)];
 
     chosenPassword=randLowerUpperNumSpecial+chosenPassword
@@ -133,7 +135,7 @@ if (confirmPassword)
 
 if (confirmPassword)
   {
-    for (var i=0; i<NumberOfCharacters; i++) {
+    for (var i=0; i<passwordLength; i++) {
       var randLowerNum= LowerNum[Math.floor(Math.random()*LowerNum.length)];
 
       chosenPassword=randLowerNum+chosenPassword;
@@ -158,7 +160,7 @@ if (confirmPassword)
 
 if (confirmPassword)
   {
-    for (var i=0; i<NumberOfCharacters; i++) {
+    for (var i=0; i<passwordLength; i++) {
       var randLowerNumSpecial =LowerNumSpecial[Math.floor(Math.random()*LowerNumSpecial.length)];
 
       chosenPassword=randLowerNumSpecial+chosenPassword;
@@ -181,7 +183,7 @@ if (confirmPassword)
 
   if (confirmPassword)
   {
-    for (var i=0; i<NumberOfCharacters; i++) {
+    for (var i=0; i<passwordLength; i++) {
       var randLowerSpecial= LowerSpecial[Math.floor(Math.random()*LowerSpecial.length)];
 
     chosenPassword=randLowerSpecial+chosenPassword;
@@ -204,7 +206,7 @@ if (confirmPassword)
 
 if (confirmPassword)
 {
-  for (var i=0;i<NumberOfCharacters; i++) {
+  for (var i=0;i<passwordLength; i++) {
   var randLowerUpperSpecial = LowerUpperSpecial[Math.floor(Math.random()*LowerUpperSpecial.length)];
 
   chosenPassword=randLowerUpperSpecial+chosenPassword;
@@ -225,7 +227,7 @@ if (confirmPassword)
 
 if (confirmPassword)
   {
-    for (var i=0; i<NumberOfCharacters; i++) {
+    for (var i=0; i<passwordLength; i++) {
       var randUppercase =uppercase[Math.floor(Math.random()*uppercase.length)];
 
       chosenPassword=randUppercase+chosenPassword;
@@ -250,7 +252,7 @@ if (confirmPassword)
   if (confirmPassword)
 
   {
-    for (var i=0; i<NumberOfCharacters; i++) {
+    for (var i=0; i<passwordLength; i++) {
       var randUpperNumbers= UpperNumbers[Math.floor(Math.random()*UpperNumbers.length)];
 
       chosenPassword=randUpperNumbers+chosenPassword;
@@ -273,7 +275,7 @@ if (confirmPassword)
 
 if (confirmPassword)
   {
-    for (var i=0; i<NumberOfCharacters; i++) {
+    for (var i=0; i<passwordLength; i++) {
       var randUpperNumSpecial= UpperNumSpecial[Math.floor(Math.random()*UpperNumSpecial.length)];
 
       chosenPassword=randUpperNumSpecial+chosenPassword;
@@ -295,7 +297,7 @@ if (confirmPassword)
 
 if (confirmPassword)
   {
-  for (var i=0; i<NumberOfCharacters; i++) {
+  for (var i=0; i<passwordLength; i++) {
     var randUpperSpecial= UpperSpecial[Math.floor(Math.random()*UpperSpecial.length)];
 
     chosenPassword=randUpperSpecial+chosenPassword;
@@ -320,7 +322,7 @@ if (confirmPassword)
 if (confirmPassword)
   {
   
-  for (var i=0; i<NumberOfCharacters; i++) {
+  for (var i=0; i<passwordLength; i++) {
     var randNumSpecial=NumSpecial[Math.floor(Math.random()*NumSpecial.length)];
 
     chosenPassword=randNumSpecial+chosenPassword;
@@ -338,7 +340,7 @@ if (confirmPassword)
 
   if (confirmPassword)
   {
-  for (var i=0; i<NumberOfCharacters; i++) {
+  for (var i=0; i<passwordLength; i++) {
     var randSpecial=specialCharacters[Math.floor(Math.random()*specialCharacters.length)];
 
     chosenPassword=randSpecial+chosenPassword;

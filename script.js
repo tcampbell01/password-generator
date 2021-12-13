@@ -14,9 +14,10 @@ function GeneratePassword () {
 
   var promptPasswordLength=window.prompt ('How many characters would you like in your password? Please type a number between 8 and 128');
   var passwordLength=parseInt(promptPasswordLength,10);
-  if (passwordLength<8 || passwordLength>128 || passwordLength!==null) {
+  if (passwordLength<8 || passwordLength>128) {
     window.alert ("You choose an incorrect value. Please start again by refreshing the browser. ");
     return false;}
+  
   
   
 

@@ -1,4 +1,55 @@
-# Password Generator Starter Code
+# Password Generator
+
+
+
+  ## Badges
+
+  
+
+  ## Table of Contents
+
+  * [License](#license)
+
+  * [Description](#description)
+
+  * [Installation](#installation)
+
+  * [Usage](#usage)
+
+  * [How to Contribute](#how-to-contribute)
+
+  * [Tests](#tests)
+
+  * [Questions?](#questions)
+
+  ## License
+ No license for this project. 
+
+  ## Description
+
+  This program uses window prompts to generate password preferences: uppercase letters, lowercase letters, numbers, special characters, and number of characters between 8-128.  Given user choices a password with these requirements is generated. 
+
+  ## Installation
+
+  No installation necessary.
+
+  ## Usage
+
+  Enter the answers to the questions when prompted by the browser. A password will be generated for you. 
+
+  ## How to Contribute
+  
+  No contributing at this time. 
+
+  ## Tests
+  No tests necessary at this time. 
+  ## Questions?
+
+  ### Reach me here: 
+  [https://github.com/tcampbell01] (https://github.com/tcampbell01)  
+  teresa.j.campbell@icloud.com
+
+
 GIVEN I need a new, secure password
 WHEN I click the button to generate a password
 THEN I am presented with a series of prompts for password criteria
@@ -15,7 +66,7 @@ THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 
-https://tcampbell01.github.io/turbo-funicular/
+
 
 
 

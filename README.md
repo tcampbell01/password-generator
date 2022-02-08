@@ -1,6 +1,6 @@
 # Password Generator
 
-
+Walkthrough video: https://watch.screencastify.com/v/NhtHmuVdwVZ3fTbT69lu
 
   ## Badges
 
